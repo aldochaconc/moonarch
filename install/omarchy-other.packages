@@ -19,7 +19,6 @@ iwd
 jdk-openjdk
 libpulse
 libsass
-libva-intel-driver
 limine
 limine-mkinitcpio-hook
 limine-snapper-sync
