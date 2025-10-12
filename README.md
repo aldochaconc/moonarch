@@ -49,5 +49,5 @@ theming
 
 ## Credits
 
-Completely based in the [Omarchy Project](https://github.com/basecamp/omarchy).
+Completely based on the [Omarchy Project](https://github.com/basecamp/omarchy).
 
