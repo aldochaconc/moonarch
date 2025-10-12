@@ -1,3 +1,1 @@
-if [[ ! -d "$HOME/.config/nvim" ]]; then
-  omarchy-lazyvim-setup
-fi
+# LazyVim setup handled by install/config/lazyvim.sh using dotfiles approach
