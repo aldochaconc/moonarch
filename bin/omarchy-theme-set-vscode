@@ -3,7 +3,7 @@
 # Note: We cannot use `jq` to update settings.json because it’s JSONC (allows comments),
 # which jq doesn’t support.
 
-VS_CODE_THEME="$HOME/.config/omarchy/current/theme/vscode.json"
+VS_CODE_THEME="$HOME/dotfiles/themes/current/theme/vscode.json"
 VS_CODE_SETTINGS="$HOME/.config/Code/User/settings.json"
 VS_CODE_SKIP_FLAG="$HOME/.local/state/omarchy/toggles/skip-vscode-theme-changes"
 
