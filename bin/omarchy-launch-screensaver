@@ -21,7 +21,7 @@ for m in $(hyprctl monitors -j | jq -r '.[] | .name'); do
   # FIXME: Find a way to make this generic where we it can work for kitty + ghostty
   hyprctl dispatch exec -- \
     alacritty --class Screensaver \
-    --config-file ~/.local/share/omarchy/default/alacritty/screensaver.toml \
+    --config-file ~/.config/alacritty/screensaver.toml \
     -e omarchy-cmd-screensaver
 done
 
