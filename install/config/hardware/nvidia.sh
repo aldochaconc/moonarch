@@ -10,22 +10,26 @@
 
 # --- GPU Detection ---
 if [ -n "$(lspci | grep -i 'nvidia')" ]; then
-  # --- Driver Selection ---
-  # Turing (16xx, 20xx), Ampere (30xx), Ada (40xx), and newer recommend the open-source kernel modules
-  if echo "$(lspci | grep -i 'nvidia')" | grep -q -E "RTX [2-9][0-9]|GTX 16"; then
-    NVIDIA_DRIVER_PACKAGE="nvidia-open-dkms"
-  else
-    NVIDIA_DRIVER_PACKAGE="nvidia-dkms"
+  # Check which kernel is installed and set appropriate headers/driver packages
+  KERNEL_HEADERS="linux-headers" # Default
+  if pacman -Q linux-lts &>/dev/null; then
+    KERNEL_HEADERS="linux-lts-headers"
+    NVIDIA_DRIVER_PACKAGE="nvidia-lts"
+  elif pacman -Q linux-zen &>/dev/null; then
+    KERNEL_HEADERS="linux-zen-headers"
+  elif pacman -Q linux-hardened &>/dev/all; then
+    KERNEL_HEADERS="linux-hardened-headers"
   fi
 
-  # Check which kernel is installed and set appropriate headers package
-  KERNEL_HEADERS="linux-headers" # Default
-  if pacman -Q linux-zen &>/dev/null; then
-    KERNEL_HEADERS="linux-zen-headers"
-  elif pacman -Q linux-lts &>/dev/null; then
-    KERNEL_HEADERS="linux-lts-headers"
-  elif pacman -Q linux-hardened &>/dev/null; then
-    KERNEL_HEADERS="linux-hardened-headers"
+  # --- Driver Selection ---
+  # If we haven't selected a specific kernel driver (like nvidia-lts), choose a DKMS one.
+  if [ -z "$NVIDIA_DRIVER_PACKAGE" ]; then
+    # Turing (16xx, 20xx), Ampere (30xx), Ada (40xx), and newer recommend the open-source kernel modules
+    if echo "$(lspci | grep -i 'nvidia')" | grep -q -E "RTX [2-9][0-9]|GTX 16"; then
+      NVIDIA_DRIVER_PACKAGE="nvidia-open-dkms"
+    else
+      NVIDIA_DRIVER_PACKAGE="nvidia-dkms"
+    fi
   fi
 
   # force package database refresh
