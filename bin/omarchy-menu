@@ -147,8 +147,8 @@ show_style_menu() {
   *Font*) show_font_menu ;;
   *Background*) omarchy-theme-bg-next ;;
   *Hyprland*) open_in_editor ~/.config/hypr/looknfeel.conf ;;
-  *Screensaver*) open_in_editor ~/.config/omarchy/branding/screensaver.txt ;;
-  *About*) open_in_editor ~/.config/omarchy/branding/about.txt ;;
+  *Screensaver*) open_in_editor ~/dotfiles/branding/screensaver.txt ;;
+  *About*) open_in_editor ~/dotfiles/branding/about.txt ;;
   *) show_main_menu ;;
   esac
 }
