@@ -8,7 +8,7 @@ for f in ~/.local/share/omarchy/themes/*; do ln -nfs "$f" ~/.config/omarchy/them
 
 # Set initial theme
 mkdir -p ~/.config/omarchy/current
-ln -snf ~/.config/omarchy/themes/tokyo-night ~/.config/omarchy/current/theme
+ln -snf ~/.config/omarchy/themes/kanawaga ~/.config/omarchy/current/theme
 ln -snf ~/.config/omarchy/current/theme/backgrounds/1-scenery-pink-lakeside-sunset-lake-landscape-scenic-panorama-7680x3215-144.png ~/.config/omarchy/current/background
 
 # Set specific app links for current theme
@@ -20,12 +20,6 @@ ln -snf ~/.config/omarchy/current/theme/btop.theme ~/.config/btop/themes/current
 mkdir -p ~/.config/mako
 ln -snf ~/.config/omarchy/current/theme/mako.ini ~/.config/mako/config
 
-mkdir -p ~/.config/eza
-ln -snf ~/.config/omarchy/current/theme/eza.yml ~/.config/eza/theme.yml
-
 # Add managed policy directories for Chromium and Brave for theme changes
 sudo mkdir -p /etc/chromium/policies/managed
 sudo chmod a+rw /etc/chromium/policies/managed
-
-sudo mkdir -p /etc/brave/policies/managed
-sudo chmod a+rw /etc/brave/policies/managed
