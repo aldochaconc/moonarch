@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH="$HOME/.local/share/omarchy/bin:$PATH"
+export PATH="$HOME/.local/share/moonarch-install/bin:$PATH"
 
 # Set to true when going directly to a submenu, so we can exit directly
 BACK_TO_EXIT=false
