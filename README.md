@@ -1,14 +1,12 @@
 # Moonarch
 
-**Moonarch**
-
 Moonarch is a fork of [Omarchy](https://github.com/basecamp/omarchy) project, refactored for a dotfiles-centric architecture and tailored for my own specific personal use case (AMD+NVIDIA hybrid graphics, development focus).
 
 It preserves Omarchy's installation methodology while introducing significant architectural changes to prioritize portability, less dependencies, user control, and a cleaner separation between the system framework and user configuration.
 
 ---
 
-## 📊 **Dotfiles Model**
+## **Dotfiles Model**
 
 The most significant change in Moonarch is the move to a **"Full Symlink" dotfiles architecture**. This resolves the complex "bridge" configuration model of the original project and establishes `~/dotfiles` as the **single source of truth** for all user configurations.
 
@@ -25,7 +23,7 @@ The most significant change in Moonarch is the move to a **"Full Symlink" dotfil
 *   **Instant Propagation**: Dotfiles changes are reflected instantly by applications.
 *   **Portability**: To set up a new machine, simply clone your dotfiles repository and run the installer to create the symlinks.
  
-## 🎨 **Theming and Branding**
+## **Theming**
 
 The `install/config/` directory is the **heart of the system configuration**. Here's the complete structure with detailed explanations:
 
@@ -34,7 +32,7 @@ The `install/config/` directory is the **heart of the system configuration**. He
 
 ---
 
-## 🚀 **Installation**
+## **Installation**
 
 ### **Quick Install**
 ```bash
@@ -56,7 +54,7 @@ After installation, your entire user configuration is ready to be managed from t
 
 ---
 
-## 🤝 **Credits & License**
+## **Credits & License**
 
 Moonarch is completely based on the [Omarchy Project](https://github.com/basecamp/omarchy) by Basecamp. It stands on the shoulders of their excellent work in creating a readable, robust Arch Linux installation framework.
 
