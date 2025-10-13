@@ -1,26 +1,34 @@
-# Set links for Nautilius action icons
-sudo ln -snf /usr/share/icons/Adwaita/symbolic/actions/go-previous-symbolic.svg /usr/share/icons/Yaru/scalable/actions/go-previous-symbolic.svg
-sudo ln -snf /usr/share/icons/Adwaita/symbolic/actions/go-next-symbolic.svg /usr/share/icons/Yaru/scalable/actions/go-next-symbolic.svg
+#!/bin/bash
+# Copies theme assets into the ~/dotfiles directory and sets the initial theme.
 
-# Setup dotfiles theme directory structure
-mkdir -p ~/dotfiles/themes/current
+# Source presentation and logging helpers
+source "$OMARCHY_INSTALL/helpers/presentation.sh"
+source "$OMARCHY_INSTALL/helpers/logging.sh"
 
-# Copy themes from repository to dotfiles (CRITICAL MISSING STEP)
-cp -R ~/.local/share/omarchy/themes/* ~/dotfiles/themes/
+echo_subsection "Deploying Themes"
 
-# Set initial theme (kanagawa-dark in dotfiles)  
-ln -snf ~/dotfiles/themes/kanagawa-dark ~/dotfiles/themes/current/theme
-ln -snf ~/dotfiles/themes/current/theme/backgrounds/1-kanagawa.jpg ~/dotfiles/themes/current/background
+# --- Step 1: Copy Theme Assets ---
+mkdir -p "$HOME/dotfiles/themes"
+log_info "Copying all themes to ~/dotfiles/themes/"
+cp -rT "$OMARCHY_PATH/themes/" "$HOME/dotfiles/themes/"
+log_success "Themes copied successfully."
 
-# Set specific app links for current theme (pointing to dotfiles)
-ln -snf ~/dotfiles/themes/current/theme/neovim.lua ~/.config/nvim/lua/plugins/theme.lua
+# --- Step 2: Copy Walker Themes ---
+# Walker has its own theme structure within dotfiles
+mkdir -p "$HOME/dotfiles/walker/themes"
+log_info "Copying walker themes to ~/dotfiles/walker/themes/"
+# Ensure the source directory exists before copying
+if [ -d "$OMARCHY_PATH/dotfiles_template/walker/themes" ]; then
+    cp -rT "$OMARCHY_PATH/dotfiles_template/walker/themes/" "$HOME/dotfiles/walker/themes/"
+    log_success "Walker themes copied successfully."
+else
+    log_info "No walker themes found in template, skipping."
+fi
 
-mkdir -p ~/.config/btop/themes
-ln -snf ~/dotfiles/themes/current/theme/btop.theme ~/.config/btop/themes/current.theme
-
-mkdir -p ~/.config/mako
-ln -snf ~/dotfiles/themes/current/theme/mako.ini ~/.config/mako/config
-
-# Add managed policy directories for Chromium for theme changes
-sudo mkdir -p /etc/chromium/policies/managed
-sudo chmod a+rw /etc/chromium/policies/managed
+# --- Step 3: Set Initial Theme ---
+# This creates the 'current' symlink that all configs point to.
+log_info "Setting initial theme to kanagawa-dark"
+ln -snf "$HOME/dotfiles/themes/kanagawa-dark" "$HOME/dotfiles/themes/current"
+# Create a link for the background for apps that need a direct path
+ln -snf "$HOME/dotfiles/themes/current/backgrounds/1-kanagawa.jpg" "$HOME/dotfiles/themes/current/background"
+log_success "Initial theme set."
