@@ -5,8 +5,11 @@ sudo ln -snf /usr/share/icons/Adwaita/symbolic/actions/go-next-symbolic.svg /usr
 # Setup dotfiles theme directory structure
 mkdir -p ~/dotfiles/themes/current
 
-# Set initial theme (kanagawa in dotfiles)
-ln -snf ~/dotfiles/themes/kanagawa ~/dotfiles/themes/current/theme
+# Copy themes from repository to dotfiles (CRITICAL MISSING STEP)
+cp -R ~/.local/share/omarchy/themes/* ~/dotfiles/themes/
+
+# Set initial theme (kanagawa-dark in dotfiles)  
+ln -snf ~/dotfiles/themes/kanagawa-dark ~/dotfiles/themes/current/theme
 ln -snf ~/dotfiles/themes/current/theme/backgrounds/1-kanagawa.jpg ~/dotfiles/themes/current/background
 
 # Set specific app links for current theme (pointing to dotfiles)
