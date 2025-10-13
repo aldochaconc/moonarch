@@ -1,0 +1,86 @@
+# Bashtop Kanagawa-lotus (light) theme
+# Based on https://github.com/rebelot/kanagawa.nvim
+
+# Main bg
+theme[main_bg]="#f2ecbc"
+
+# Main text color
+theme[main_fg]="#545464"
+
+# Title color for boxes
+theme[title]="#43436c"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#c84053"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#d9d7ce"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#6f894e"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#8a8980"
+
+# Color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#545464"
+
+# Background color of the percentage meters
+theme[meter_bg]="#d9d7ce"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#77713f"
+
+# CPU, Memory, Network, Proc box outline colors
+theme[cpu_box]="#597b75"
+theme[mem_box]="#4d699b"
+theme[net_box]="#b35b79"
+theme[proc_box]="#6f894e"
+
+# Box divider line and small boxes line color
+theme[div_line]="#8a8980"
+
+# Temperature graph color (Green -> Yellow -> Red)
+theme[temp_start]="#6f894e"
+theme[temp_mid]="#cc6d00"
+theme[temp_end]="#c84053"
+
+# CPU graph colors (Teal -> Lavender)
+theme[cpu_start]="#597b75"
+theme[cpu_mid]="#4d699b"
+theme[cpu_end]="#b35b79"
+
+# Mem/Disk free meter (Cyan -> Green -> Yellow -> Red)
+theme[free_start]="#597b75"
+theme[free_mid]="#6f894e"
+theme[free_end]="#c84053"
+
+# Mem/Disk cached meter (Cyan -> Green)
+theme[cached_start]="#597b75"
+theme[cached_mid]="#6f894e"
+theme[cached_end]="#77713f"
+
+# Mem/Disk available meter (Cyan -> Green -> Yellow -> Red)
+theme[available_start]="#597b75"
+theme[available_mid]="#6f894e"
+theme[available_end]="#c84053"
+
+# Mem/Disk used meter (Green -> Yellow -> Red)
+theme[used_start]="#6f894e"
+theme[used_mid]="#cc6d00"
+theme[used_end]="#c84053"
+
+# Download graph colors (Cyan -> Green)
+theme[download_start]="#597b75"
+theme[download_mid]="#6f894e"
+theme[download_end]="#77713f"
+
+# Upload graph colors (Green -> Yellow)
+theme[upload_start]="#6f894e"
+theme[upload_mid]="#cc6d00"
+theme[upload_end]="#c84053"
+
+# Process box color gradient for threads, mem and cpu usage (Green -> Yellow -> Red)
+theme[process_start]="#6f894e"
+theme[process_mid]="#cc6d00"
+theme[process_end]="#c84053"

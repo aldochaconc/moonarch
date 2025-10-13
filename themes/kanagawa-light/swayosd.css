@@ -1,0 +1,12 @@
+/* Kanagawa lotus (light) theme for swayosd */
+window {
+    background-color: rgba(242, 236, 188, 0.9);
+    color: #545464;
+    border-radius: 8px;
+    border: 1px solid rgba(138, 137, 128, 0.5);
+}
+
+progressbar {
+    color: #6f894e;
+    background-color: rgba(217, 215, 206, 0.8);
+}
