@@ -23,17 +23,17 @@ sudo pacman -Syu --noconfirm --needed git
 OMARCHY_REPO="${OMARCHY_REPO:-aldochaconc/moonarch}"
 
 echo -e "\nCloning Omarchy from: https://github.com/${OMARCHY_REPO}.git"
-rm -rf ~/.local/share/omarchy/
-git clone "https://github.com/${OMARCHY_REPO}.git" ~/.local/share/omarchy >/dev/null
+rm -rf ~/.local/share/moonarch-install/
+git clone "https://github.com/${OMARCHY_REPO}.git" ~/.local/share/moonarch-install >/dev/null
 
 # Use custom branch if instructed, otherwise default to master
 OMARCHY_REF="${OMARCHY_REF:-main}"
 if [[ $OMARCHY_REF != "master" ]]; then
   echo -e "\e[32mUsing branch: $OMARCHY_REF\e[0m"
-  cd ~/.local/share/omarchy
+  cd ~/.local/share/moonarch-install
   git fetch origin "${OMARCHY_REF}" && git checkout "${OMARCHY_REF}"
   cd -
 fi
 
 echo -e "\nInstallation starting..."
-source ~/.local/share/omarchy/install.sh
+source ~/.local/share/moonarch-install/install.sh
