@@ -67,9 +67,9 @@ Implements a comprehensive dotfiles-first approach that **completely detaches** 
 ~/dotfiles/
 ├── 📁 themes/                        # 🎨 THEME MANAGEMENT SYSTEM
 │   ├── 📁 current/                   # Active theme symlinks
-│   │   ├── theme -> ../kanagawa/     # Current theme pointer
-│   │   └── background -> ../kanagawa/backgrounds/1-kanagawa.jpg
-│   ├── 📁 kanagawa/                  # Kanagawa dark theme (wave variant)
+│   │   ├── theme -> ../kanagawa-dark/     # Current theme pointer
+│   │   └── background -> ../kanagawa-dark/backgrounds/1-kanagawa.jpg
+│   ├── 📁 kanagawa-dark/                  # Kanagawa dark theme (wave variant)
 │   │   ├── 📁 backgrounds/           # Theme wallpapers
 │   │   ├── alacritty.toml           # Terminal colors
 │   │   ├── neovim.lua               # 📝 Neovim theme integration
@@ -98,8 +98,8 @@ The dotfiles system uses intelligent symlinking to maintain theme coherence:
 ```bash
 # Theme System Links
 ~/.config/nvim -> ~/dotfiles/nvim/                    # Neovim config
-~/dotfiles/themes/current/theme -> ~/dotfiles/themes/kanagawa/  # Current theme
-~/dotfiles/themes/current/background -> ~/dotfiles/themes/kanagawa/backgrounds/1-kanagawa.jpg
+~/dotfiles/themes/current/theme -> ~/dotfiles/themes/kanagawa-dark/  # Current theme
+~/dotfiles/themes/current/background -> ~/dotfiles/themes/kanagawa-dark/backgrounds/1-kanagawa.jpg
 
 # Application Theme Links  
 ~/.config/nvim/lua/plugins/theme.lua -> ~/dotfiles/themes/current/theme/neovim.lua
@@ -209,7 +209,7 @@ OMARCHY_REPO="yourusername/moonarch" bash boot.sh
 ~/dotfiles/nvim/          # Neovim configuration
 
 # Verify theme system:
-omarchy-theme-current      # Should show: kanagawa
+omarchy-theme-current      # Should show: kanagawa-dark
 omarchy-theme-list         # Should show available themes
 ```
 
@@ -217,7 +217,7 @@ omarchy-theme-list         # Should show available themes
 ```bash
 # Switch themes
 omarchy-theme-set kanagawa-light    # Light variant
-omarchy-theme-set kanagawa          # Dark variant (default)
+omarchy-theme-set kanagawa-dark     # Dark variant (default)
 
 # Cycle backgrounds  
 omarchy-theme-bg-next              # Next wallpaper in current theme
@@ -246,8 +246,8 @@ TODO: REVIEW THIS AI GENERATED BULLSHIT
 # Creates dotfiles theme structure
 mkdir -p ~/dotfiles/themes/current
 
-# Sets initial theme (kanagawa in dotfiles)  
-ln -snf ~/dotfiles/themes/kanagawa ~/dotfiles/themes/current/theme
+# Sets initial theme (kanagawa-dark in dotfiles)  
+ln -snf ~/dotfiles/themes/kanagawa-dark ~/dotfiles/themes/current/theme
 ln -snf ~/dotfiles/themes/current/theme/backgrounds/1-kanagawa.jpg ~/dotfiles/themes/current/background
 
 # Links applications to current theme
@@ -318,7 +318,7 @@ This project maintains the same MIT license as the original Omarchy project.
 ## 🚀 **Quick Start Summary**
 
 1. **Install**: `curl -fsSL https://raw.githubusercontent.com/aldochaconc/moonarch/main/boot.sh | bash`
-2. **Verify Themes**: `omarchy-theme-current` (should show kanagawa)
+2. **Verify Themes**: `omarchy-theme-current` (should show kanagawa-dark)
 3. **Check Dotfiles**: `ls ~/dotfiles/` (themes, branding, nvim directories)
 4. **Customize**: Use `omarchy-theme-*` commands and edit `~/dotfiles/`
 
