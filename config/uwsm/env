@@ -1,7 +1,7 @@
 # Changes require a relaunch of Hyprland to take effect.
 
 # Ensure Omarchy bins are in the path
-export OMARCHY_PATH=$HOME/.local/share/omarchy
+export OMARCHY_PATH=$HOME/.local/share/moonarch-install
 export PATH=$OMARCHY_PATH/bin/:$PATH
 
 # Set default terminal and editor
