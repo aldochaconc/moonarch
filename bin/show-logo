@@ -1,0 +1,7 @@
+#!/bin/bash
+
+clear
+echo -e "\033[32m"
+cat <"${HOME}/.local/share/moonarch/logo.txt"
+echo -e "\033[0m"
+echo

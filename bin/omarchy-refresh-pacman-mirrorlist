@@ -1,3 +1,0 @@
-#!/bin/bash
-
-sudo cp -f ~/.local/share/moonarch-install/config/pacman/mirrorlist /etc/pacman.d/mirrorlist

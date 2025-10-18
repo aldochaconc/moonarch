@@ -1,0 +1,15 @@
+#!/bin/bash
+
+SHARE_DIR="${SHARE_DIR:-"${HOME}/.local/share/moonarch"}"
+
+# Copy and sync icon files
+mkdir -p ~/.local/share/icons/hicolor/48x48/apps/
+cp "${SHARE_DIR}/applications/icons/*.png" ~/.local/share/icons/hicolor/48x48/apps/
+gtk-update-icon-cache ~/.local/share/icons/hicolor &>/dev/null
+
+# Copy .desktop declarations
+mkdir -p ~/.local/share/applications
+cp "${SHARE_DIR}/applications/*.desktop" ~/.local/share/applications/
+cp "${SHARE_DIR}/applications/hidden/*.desktop" ~/.local/share/applications/
+
+update-desktop-database ~/.local/share/applications
