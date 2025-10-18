@@ -1,3 +1,5 @@
+#!/bin/bash
+
 abort() {
   echo -e "\e[31mInstall requires: $1\e[0m"
   echo

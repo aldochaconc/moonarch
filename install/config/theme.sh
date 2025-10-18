@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Copies theme assets into the ~/dotfiles directory and sets the initial theme.
 
 # Source presentation and logging helpers

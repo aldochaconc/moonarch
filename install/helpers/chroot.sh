@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Starting the installer with MOONARCH_CHROOT_INSTALL=1 will put it into chroot mode
 chrootable_systemctl_enable() {
   if [ -n "${MOONARCH_CHROOT_INSTALL:-}" ]; then

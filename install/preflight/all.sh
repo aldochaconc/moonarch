@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source $MOONARCH_INSTALL/preflight/guard.sh
 source $MOONARCH_INSTALL/preflight/begin.sh
 run_logged $MOONARCH_INSTALL/preflight/show-env.sh

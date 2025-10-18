@@ -1,3 +1,5 @@
+#!/bin/bash
+
 webapp-install "Discord" https://discord.com/channels/@me Discord.png
 webapp-install "GitHub" https://github.com/ GitHub.png
 webapp-install "Google Calendar" https://calendar.google.com/calendar/u/0/r/week GoogleCalendar.png

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 run_logged $MOONARCH_INSTALL/config/config.sh
 run_logged $MOONARCH_INSTALL/config/theme.sh
 run_logged $MOONARCH_INSTALL/config/branding.sh

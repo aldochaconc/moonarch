@@ -1,3 +1,5 @@
+#!/bin/bash
+
 MOONARCH_MIGRATIONS_STATE_PATH=~/.local/state/moonarch/migrations
 mkdir -p $MOONARCH_MIGRATIONS_STATE_PATH
 

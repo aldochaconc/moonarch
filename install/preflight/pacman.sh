@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [[ -n ${MOONARCH_ONLINE_INSTALL:-} ]]; then
   # Install build tools
   sudo pacman -S --needed --noconfirm base-devel

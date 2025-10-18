@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if command -v limine &>/dev/null; then
   sudo tee /etc/mkinitcpio.conf.d/moonarch_hooks.conf <<EOF >/dev/null
 HOOKS=(base udev plymouth keyboard autodetect microcode modconf kms keymap consolefont block encrypt filesystems fsck btrfs-overlayfs)

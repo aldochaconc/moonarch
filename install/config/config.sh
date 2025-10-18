@@ -1,9 +1,11 @@
 #!/bin/bash
+
 # Copies the dotfiles_template to the user's ~/dotfiles directory
 # and then creates symlinks from ~/.config and ~/ to the files and directories
 # within ~/dotfiles.
 
 # Source presentation and logging helpers
+#
 source "$MOONARCH_INSTALL/helpers/presentation.sh"
 source "$MOONARCH_INSTALL/helpers/logging.sh"
 

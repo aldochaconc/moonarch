@@ -1,4 +1,5 @@
-# Omarchy logo in a font for Waybar use
+#!/bin/bash
+
 mkdir -p ~/.local/share/fonts
 cp ~/.local/share/moonarch/config/moonarch.ttf ~/.local/share/fonts/
 fc-cache

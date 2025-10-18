@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Copies the branding assets into the ~/dotfiles directory.
 
 # Source presentation and logging helpers

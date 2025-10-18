@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Setup GPG configuration with multiple keyservers for better reliability
 sudo mkdir -p /etc/gnupg
 sudo cp ~/.local/share/moonarch/config/gpg/dirmngr.conf /etc/gnupg/
