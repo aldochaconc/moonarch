@@ -1,4 +1,4 @@
-# Omarchy core package list installed via install/packages.sh
+# core package list installed via install/packages.sh
 # This file is also used by the ISO builder when determining needs
 
 alacritty
@@ -65,7 +65,7 @@ noto-fonts-emoji
 noto-fonts-extra
 nss-mdns
 nvim
-omarchy-chromium
+chromium
 pamixer
 playerctl
 plocate

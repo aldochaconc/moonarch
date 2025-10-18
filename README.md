@@ -43,10 +43,10 @@ curl -fsSL https://raw.githubusercontent.com/aldochaconc/moonarch/main/boot.sh |
 ### **Local Install**
 ```bash
 # Clone the repository
-git clone https://github.com/aldochaconc/moonarch.git ~/.local/share/moonarch-install
+git clone https://github.com/aldochaconc/moonarch.git ~/.local/share/moonarch
 
 # Run the installer
-~/.local/share/moonarch-install/install.sh
+~/.local/share/moonarch/install.sh
 ```
 
 ### **Post-Installation**

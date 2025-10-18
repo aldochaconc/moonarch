@@ -1,4 +1,4 @@
-# All the default Omarchy aliases and functions
+# All the default aliases and functions
 # (don't mess with these directly, just overwrite them here!)
 
 # Add your own exports, aliases, and functions here.

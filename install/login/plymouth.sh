@@ -4,9 +4,9 @@
 # PLYMOUTH SETUP
 # ==============================================================================
 
-if [ "$(plymouth-set-default-theme)" != "omarchy" ]; then
-  sudo cp -r "$HOME/.local/share/moonarch-install/default/plymouth" /usr/share/plymouth/themes/omarchy/
-  sudo plymouth-set-default-theme omarchy
+if [ "$(plymouth-set-default-theme)" != "moonarch" ]; then
+  sudo cp -r "$HOME/.local/share/moonarch/default/plymouth" /usr/share/plymouth/themes/moonarch/
+  sudo plymouth-set-default-theme moonarch
 fi
 
 # ==============================================================================
@@ -94,11 +94,11 @@ CCODE
   rm /tmp/seamless-login.c
 fi
 
-if [ ! -f /etc/systemd/system/omarchy-seamless-login.service ]; then
-  cat <<EOF | sudo tee /etc/systemd/system/omarchy-seamless-login.service
+if [ ! -f /etc/systemd/system/moonarch-seamless-login.service ]; then
+  cat <<EOF | sudo tee /etc/systemd/system/moonarch-seamless-login.service
 [Unit]
-Description=Omarchy Seamless Auto-Login
-Documentation=https://github.com/basecamp/omarchy
+Description=Moonarch Seamless Auto-Login
+Documentation=https://github.com/aldochaconc/moonarch
 Conflicts=getty@tty1.service
 After=systemd-user-sessions.service getty@tty1.service plymouth-quit.service systemd-logind.service
 PartOf=graphical.target
@@ -140,9 +140,9 @@ if ! systemctl is-enabled plymouth-quit-wait.service | grep -q masked; then
   sudo systemctl daemon-reload
 fi
 
-# Enable omarchy-seamless-login.service only if not already enabled
-if ! systemctl is-enabled omarchy-seamless-login.service | grep -q enabled; then
-  sudo systemctl enable omarchy-seamless-login.service
+# Enable moonarch-seamless-login.service only if not already enabled
+if ! systemctl is-enabled moonarch-seamless-login.service | grep -q enabled; then
+  sudo systemctl enable moonarch-seamless-login.service
 fi
 
 # Disable getty@tty1.service only if not already disabled

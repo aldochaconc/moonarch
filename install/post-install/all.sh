@@ -1,2 +1,2 @@
-run_logged $OMARCHY_INSTALL/post-install/pacman.sh
-source $OMARCHY_INSTALL/post-install/finished.sh
+run_logged $MOONARCH_INSTALL/post-install/pacman.sh
+source $MOONARCH_INSTALL/post-install/finished.sh

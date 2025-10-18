@@ -2,15 +2,15 @@
 # Copies theme assets into the ~/dotfiles directory and sets the initial theme.
 
 # Source presentation and logging helpers
-source "$OMARCHY_INSTALL/helpers/presentation.sh"
-source "$OMARCHY_INSTALL/helpers/logging.sh"
+source "$MOONARCH_INSTALL/helpers/presentation.sh"
+source "$MOONARCH_INSTALL/helpers/logging.sh"
 
 echo_subsection "Deploying Themes"
 
 # --- Step 1: Copy Theme Assets ---
 mkdir -p "$HOME/dotfiles/themes"
 log_info "Copying all themes to ~/dotfiles/themes/"
-cp -rT "$OMARCHY_PATH/themes/" "$HOME/dotfiles/themes/"
+cp -rT "$MOONARCH_PATH/themes/" "$HOME/dotfiles/themes/"
 log_success "Themes copied successfully."
 
 # --- Step 2: Copy Walker Themes ---
@@ -18,8 +18,8 @@ log_success "Themes copied successfully."
 mkdir -p "$HOME/dotfiles/walker/themes"
 log_info "Copying walker themes to ~/dotfiles/walker/themes/"
 # Ensure the source directory exists before copying
-if [ -d "$OMARCHY_PATH/dotfiles_template/walker/themes" ]; then
-    cp -rT "$OMARCHY_PATH/dotfiles_template/walker/themes/" "$HOME/dotfiles/walker/themes/"
+if [ -d "$MOONARCH_PATH/dotfiles_template/walker/themes" ]; then
+    cp -rT "$MOONARCH_PATH/dotfiles_template/walker/themes/" "$HOME/dotfiles/walker/themes/"
     log_success "Walker themes copied successfully."
 else
     log_info "No walker themes found in template, skipping."

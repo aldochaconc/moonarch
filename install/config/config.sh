@@ -4,8 +4,8 @@
 # within ~/dotfiles.
 
 # Source presentation and logging helpers
-source "$OMARCHY_INSTALL/helpers/presentation.sh"
-source "$OMARCHY_INSTALL/helpers/logging.sh"
+source "$MOONARCH_INSTALL/helpers/presentation.sh"
+source "$MOONARCH_INSTALL/helpers/logging.sh"
 
 echo_section "Deploying Dotfiles"
 
@@ -16,8 +16,8 @@ mkdir -p "$HOME/.backups"
 
 # --- Step 1: Copy Template to Dotfiles ---
 echo_subsection "Copying template to ~/dotfiles"
-log_info "Copying dotfiles template from $OMARCHY_PATH/dotfiles_template/ to $HOME/dotfiles/"
-cp -rT "$OMARCHY_PATH/dotfiles_template/" "$HOME/dotfiles/"
+log_info "Copying dotfiles template from $MOONARCH_PATH/dotfiles_template/ to $HOME/dotfiles/"
+cp -rT "$MOONARCH_PATH/dotfiles_template/" "$HOME/dotfiles/"
 log_success "Dotfiles template copied successfully."
 
 # --- Step 2: Create Symlinks ---
@@ -55,6 +55,6 @@ log_success "Symlinks created successfully."
 # --- Step 3: Handle remaining system-wide configs ---
 echo_subsection "Deploying system-wide configurations"
 # Copy over the remaining non-dotfile configs
-log_info "Copying system configs from $OMARCHY_PATH/config/ to $HOME/.config/"
-cp -rT "$OMARCHY_PATH/config/" "$HOME/.config/"
+log_info "Copying system configs from $MOONARCH_PATH/config/ to $HOME/.config/"
+cp -rT "$MOONARCH_PATH/config/" "$HOME/.config/"
 log_success "System-wide configurations deployed."
