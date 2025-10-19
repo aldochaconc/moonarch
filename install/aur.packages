@@ -1,4 +1,5 @@
-# core package list installed from the aur
+# AUR packages to be installed during system setup
+# These will be built and installed by the installer, not included in the ISO
 
 yay
 python-terminaltexteffects
@@ -9,4 +10,3 @@ walker-bin
 yaru-icon-theme
 limine-mkinitcpio-hook
 limine-snapper-sync
-yay-debug
