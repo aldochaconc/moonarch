@@ -1,6 +1,7 @@
 #!/bin/bash
 
 run_logged $MOONARCH_INSTALL/packaging/base.sh
+run_logged $MOONARCH_INSTALL/packaging/aur.sh
 run_logged $MOONARCH_INSTALL/packaging/zsh.sh
 run_logged $MOONARCH_INSTALL/packaging/fonts.sh
 run_logged $MOONARCH_INSTALL/packaging/lazyvim.sh
