@@ -1,12 +1,13 @@
-# AUR packages to be installed during system setup
-# These will be built and installed by the installer, not included in the ISO
+# AUR packages for Moonarch customization
+# These are installed after the base system from ISO
 
 yay
+limine-mkinitcpio-hook
+limine-snapper-sync
+tzupdate
 python-terminaltexteffects
 spotify
 ttf-ia-writer
 ufw-docker
 walker-bin
 yaru-icon-theme
-limine-mkinitcpio-hook
-limine-snapper-sync
